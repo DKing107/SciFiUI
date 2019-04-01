@@ -47,10 +47,10 @@ public class UI extends PApplet
     {
         background(0);
         s.render();
-        b.render();
+        //b.render();
 
-        mc.update();
-        mc.render();
+        //mc.update();
+        //mc.render();
 
         radar.update();
         radar.render();
