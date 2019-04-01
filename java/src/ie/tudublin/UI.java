@@ -6,7 +6,7 @@ public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
-
+    Structure s;
     boolean[] keys = new boolean[1024];
 
     public void keyPressed()
@@ -33,10 +33,12 @@ public class UI extends PApplet
     }
 
     public void setup()
+
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
+        s = new Structure(this, 10, 10);
     }
 
     Radar radar;
@@ -44,6 +46,7 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
+        s.render();
         b.render();
 
         mc.update();
