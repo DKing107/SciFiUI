@@ -7,6 +7,7 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     Structure s;
+    Window w;
     boolean[] keys = new boolean[1024];
 
     public void keyPressed()
@@ -39,7 +40,7 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         s = new Structure(this, 10, 10);
-    }
+        w = new Window(this);    }
 
     Radar radar;
 
@@ -47,6 +48,7 @@ public class UI extends PApplet
     {
         background(0);
         s.render();
+        w.render();
         //b.render();
 
         //mc.update();
