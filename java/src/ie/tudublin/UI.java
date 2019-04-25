@@ -4,6 +4,7 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
+    TieFighter t;
     Button b;
     MovingCircle mc;
     Structure s;
@@ -34,13 +35,15 @@ public class UI extends PApplet
     }
 
     public void setup()
-
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height * .75f, 50);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         s = new Structure(this, 10, 10);
-        w = new Window(this);    }
+        w = new Window(this);  
+        t = new TieFighter(this);  
+    
+    }
 
     Radar radar;
 
@@ -49,6 +52,7 @@ public class UI extends PApplet
         background(0);
         s.render();
         w.render();
+        t.render();
         //b.render();
 
         //mc.update();
