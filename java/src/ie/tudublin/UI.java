@@ -4,6 +4,7 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
+    TargetAcquired ta;
     TieFighter t;
     Button b;
     MovingCircle mc;
@@ -37,11 +38,12 @@ public class UI extends PApplet
     public void setup()
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height * .75f, 50);
+        mc = new MovingCircle(this);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         s = new Structure(this, 10, 10);
         w = new Window(this);  
         t = new TieFighter(this);  
+        ta = new TargetAcquired(this);
     
     }
 
@@ -53,10 +55,11 @@ public class UI extends PApplet
         s.render();
         w.render();
         t.render();
+        ta.render();
         //b.render();
 
-        //mc.update();
-        //mc.render();
+        mc.update();
+        mc.render();
 
         radar.update();
         radar.render();
@@ -66,5 +69,6 @@ public class UI extends PApplet
             System.out.println("Left arrow key pressed");
         }
     }
+
 }
 

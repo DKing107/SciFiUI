@@ -1,43 +1,47 @@
 package ie.tudublin;
-
-import processing.core.PApplet;
+import java.util.Random;
 
 public class MovingCircle
 {
-    private float x;
+    String[] Numbers = {"  ENGINE : 57%", "   GUNS : 81%", " BATTERY: 41%", "ALTITUDE: 11Kft", "   FUEL: 91G'S"};
+    private int x = -1200;
+    private int y = 507;
     private float dx = 1;
-    private float y;
-    private float diameter;
-    private float radius;
     UI ui;
 
-    public MovingCircle(UI ui, float x, float y, float diameter)
-    {
+    public MovingCircle(UI ui)
+    {    
         this.ui = ui;
-        this.x = x;
-        this.y = y;
-        this.diameter = diameter;
-        radius = diameter / 2;
     }
     
     public void render()
     {
         ui.stroke(255);
-        ui.noFill();
-        ui.ellipse(x, y, diameter, diameter);
-        ui.fill(255);
-        // Static field
-        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text("I am a moving circle", x, y);
+        Random rand = new Random();
+        int value1 = rand.nextInt(255);
+        int value2 = rand.nextInt(255);
+        int value3 = rand.nextInt(255);
+        int value4 = rand.nextInt(255);
 
+        int j = 0;
+        int k = 0;
+        for(int i =0;i<5;i++){
+        ui.fill(value1,value2,value3,value4);
+        ui.textSize(16);
+        ui.rect(x + j, y, 150, 25);
+        ui.fill(0,0,0);
+        ui.text(Numbers[k], x + 10 + j ,y + 18);
+        k = k + 1;
+        j = j + 300;
+        } 
     }
 
     public void update()
     {
         x += dx;
-        if ((x > ui.width - radius) || (x < radius))
+        if (x == 800)
         {
-            dx *= -1;
+            x = x - 1800;
         }
     }
 }
