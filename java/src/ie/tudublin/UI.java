@@ -4,6 +4,7 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
+    WindowScreen ws;
     TargetAcquired ta;
     TieFighter t;
     Button b;
@@ -44,7 +45,7 @@ public class UI extends PApplet
         w = new Window(this);  
         t = new TieFighter(this);  
         ta = new TargetAcquired(this);
-    
+        ws = new WindowScreen(this);
     }
 
     Radar radar;
@@ -56,6 +57,7 @@ public class UI extends PApplet
         w.render();
         t.render();
         ta.render();
+        ws.render();
         //b.render();
 
         mc.update();

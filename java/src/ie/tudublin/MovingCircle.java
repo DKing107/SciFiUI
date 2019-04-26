@@ -32,7 +32,7 @@ public class MovingCircle
         ui.fill(0,0,0);
         ui.text(Numbers[k], x + 10 + j ,y + 18);
         k = k + 1;
-        j = j + 300;
+        j = j + 250;
         } 
     }
 

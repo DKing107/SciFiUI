@@ -19,7 +19,7 @@ public class Structure{
       ui.rect(320 + 2 * x, y, 450, 480);
       ui.rect(x, 540 + y, 450, 240);
       ui.rect(450 + 2 * x, 540 + y, 320, 240);
-      ui.rect(x, 500, 800 - 2 * x, 40);
+      ui.rect(-1, 500, 800, 40);
     }
 
 

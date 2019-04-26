@@ -1,6 +1,8 @@
 package ie.tudublin;
+import processing.core.PApplet;
+import java.util.Random;
 
-public class TieFighter{
+public class TieFighter extends PApplet{
     UI ui;
     private int x = 500;
     private int y = 575;
@@ -10,6 +12,16 @@ public class TieFighter{
     }
 
     public void render(){
+
+        Random rand = new Random();
+        int z = rand.nextInt(255);
+
+        //Warning Sign
+        ui.fill(255, 0, 0);
+        String Text = "WARNING: ENGINE FAILURE";
+        ui.text(Text, x + 20,y + 210);
+        ui.noFill();
+
 
         //Draw TieFighter background grid
         ui.stroke(0,0,225);
@@ -33,7 +45,9 @@ public class TieFighter{
         ui.line(x + 145, y + 95, x + 165, y + 95);
 
         ui.ellipse(x + 125, y + 95, 120,120);
+        ui.fill(z,0,0);
         ui.rect(x + 15, y + 55, 25, 80);
+        ui.noFill();
         ui.rect(x + 210, y + 55, 25, 80);
 
         ui.line(x + 80, y + 54, x + 40, y + 70);
@@ -41,7 +55,9 @@ public class TieFighter{
         ui.line(x + 80, y + 134, x + 40, y + 120);
         ui.line(x + 170, y + 134, x + 210, y + 120);
 
+        ui.fill(z,0,0);
         ui.rect(x - 5, y - 10 , 10, 210);
+        ui.noFill();
         ui.rect(x + 245, y - 10 , 10, 210);
 
         ui.line(x + 15, y + 60, x + 5, y);
