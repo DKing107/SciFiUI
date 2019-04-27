@@ -1,7 +1,10 @@
 package ie.tudublin;
+import processing.core.PApplet;
 
-public class InFoGraph{
+public class InFoGraph extends PApplet{
     UI ui;
+    String Numbers[] = {"10","20","30","40","50"};
+    String Info[] = {"A1","B2","C3","D4"};
     private int x=40;
     private int y=275;
     private int z1 = 0;
@@ -19,13 +22,29 @@ public class InFoGraph{
 
     public void render(){
 
+        ui.noFill();
+        ui.stroke(0,100,0);
         ui.line(x,y,x,y + 185);
         ui.line(x,y + 185,x + 250,y + 185);
+        ui.stroke(0,128,0);
         ui.rect(x, y + 25, z1 + 10, 20);
         ui.rect(x, y + 65, z2 + 10, 20);
         ui.rect(x, y + 105, z3 + 10, 20);
         ui.rect(x, y + 145, z4 + 10, 20);
-        
+
+
+        int s = 0;
+        for(int i=0;i<4;i++){
+            ui.text(Info[i],x - 25,y + 40 + s);
+            s = s + 40;
+        }
+
+        int j = 0;
+        for(int i=0;i<5;i++){
+            ui.text(Numbers[i],x + 15 + j,y + 205);
+            j = j + 50;
+        }
+
     }
 
     public void update()
