@@ -41,7 +41,7 @@ public class MovingCircle
         x += dx;
         if (x == 800)
         {
-            x = x - 1800;
+            x = x - 2000;
         }
     }
 }

@@ -58,6 +58,7 @@ public class UI extends PApplet
         t.render();
         ta.render();
         ws.render();
+        ws.update();
         //b.render();
 
         mc.update();
