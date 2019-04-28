@@ -84,7 +84,7 @@ public class InFoGraph extends PApplet{
             z4 = z4 + 1;
             r4 = r4 + 1;
         } else if(r4 >= 160){
-            z4 = z4 - 2;
+            z4 = z4 - 3;
             if(z4<=0){
                 r4 = 0;
             }

@@ -4,7 +4,6 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
-    Background bg;
     Buttons b;
     InFoGraph i;
     WindowScreen ws;
@@ -49,7 +48,6 @@ public class UI extends PApplet
         ta = new TargetAcquired(this);
         ws = new WindowScreen(this);
         i = new InFoGraph(this);
-        bg  = new Background(this);
     }
 
     Radar radar;
