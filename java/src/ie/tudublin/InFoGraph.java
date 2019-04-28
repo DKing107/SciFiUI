@@ -89,7 +89,5 @@ public class InFoGraph extends PApplet{
                 r4 = 0;
             }
         }
-
     }
-
 }

@@ -4,11 +4,12 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
+    Background bg;
+    Buttons b;
     InFoGraph i;
     WindowScreen ws;
     TargetAcquired ta;
     TieFighter t;
-    Button b;
     MovingCircle mc;
     Structure s;
     Window w;
@@ -39,7 +40,7 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
+        b = new Buttons(this);
         mc = new MovingCircle(this);
         radar = new Radar(this, 1, width / 2, height / 2, 100);
         s = new Structure(this, 10, 10);
@@ -48,13 +49,14 @@ public class UI extends PApplet
         ta = new TargetAcquired(this);
         ws = new WindowScreen(this);
         i = new InFoGraph(this);
+        bg  = new Background(this);
     }
 
     Radar radar;
 
     public void draw()
     {
-        background(0);
+        background(20);
         s.render();
         w.render();
         t.render();
@@ -63,7 +65,8 @@ public class UI extends PApplet
         ws.update();
         i.render();
         i.update();
-        //b.render();
+        b.render();
+        b.update();
 
         mc.update();
         mc.render();

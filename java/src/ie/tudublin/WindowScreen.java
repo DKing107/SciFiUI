@@ -93,7 +93,6 @@ public class WindowScreen extends PApplet{
             l = l + 30;
         }
 
-
     }
 
 }
