@@ -21,6 +21,4 @@ public class Structure{
       ui.rect(450 + 2 * x, 540 + y, 320, 240);
       ui.rect(-1, 500, 800, 40);
     }
-
-
 }

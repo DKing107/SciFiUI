@@ -99,6 +99,4 @@ public class Radar
     public void setFrequency(float frequency) {
         this.frequency = frequency;
     }
-
-    
 }
